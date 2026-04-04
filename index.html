@@ -363,12 +363,39 @@
     }
     footer .copy { font-size: 11px; color: var(--mid); }
 
-    /* ── Responsive ── */
+        /* ── Sample Work ── */
+    .sample-strip {
+      padding: 56px 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .sample-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 4px;
+    }
+    .sample-scroll::-webkit-scrollbar { height: 3px; }
+    .sample-scroll::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+    .sample-img {
+      flex: 0 0 auto;
+      width: 340px;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 3px;
+      scroll-snap-align: start;
+      display: block;
+    }
+
+/* ── Responsive ── */
     @media (max-width: 900px) {
       nav { padding: 20px 24px; }
       .nav-links { display: none; }
       .hero { padding: 50px 24px 44px; }
       .section { padding: 52px 24px; }
+      .sample-strip { padding: 44px 24px; }
+      .sample-img { width: 280px; height: 190px; }
       .packages { grid-template-columns: 1fr; }
       .addons { grid-template-columns: 1fr; }
       .cta-section { flex-direction: column; padding: 52px 24px; }
@@ -397,6 +424,19 @@
   <p class="eyebrow">Real Estate Photography</p>
   <h1>Photography that sells<br>properties faster.</h1>
   <p>Professional photography, video, and marketing visuals for real estate agents and brokers throughout the Reno area. Every listing includes a single-page property website at no extra cost.</p>
+</div>
+
+<!-- Sample Work Strip -->
+<div class="sample-strip">
+  <p class="section-title">Sample Work</p>
+  <div class="sample-scroll">
+    <img class="sample-img" src="https://format.creatorcdn.com/fc41f631-4ea7-40cf-abc8-fba59489300e/0/0/0/0,0,3212,2140,1200,800/0-0-0/f0598d89-209a-462c-ba2d-4123680f7689/1/1/1-print-380+Genoa+Ln-1.jpg?fjkss=exp=2090960866~hmac=b952029ac7b32c509ae477172c5f85fa4f253981def82b084b98f7dd9007c4e1" alt="Real estate exterior" loading="lazy">
+    <img class="sample-img" src="https://format.creatorcdn.com/fc41f631-4ea7-40cf-abc8-fba59489300e/0/0/0/0,0,3642,2429,1200,800/0-0-0/10f34e1d-03ac-4b93-ba1b-837301c4f4d6/1/1/10-print-6136+Falabella+Updates-11.jpg?fjkss=exp=2090960866~hmac=207bbd8283bada5cc576552544d4b9600f42e375cd4b6cf6d7558a452ee540c7" alt="Kitchen interior" loading="lazy">
+    <img class="sample-img" src="https://format.creatorcdn.com/fc41f631-4ea7-40cf-abc8-fba59489300e/0/0/0/0,0,3642,2429,1200,800/0-0-0/a06f146a-87ad-4e10-ac64-ec522b01b972/1/1/Homesite+200-2.jpg?fjkss=exp=2090960866~hmac=207bbd8283bada5cc576552544d4b9600f42e375cd4b6cf6d7558a452ee540c7" alt="Aerial homesite" loading="lazy">
+    <img class="sample-img" src="https://format.creatorcdn.com/fc41f631-4ea7-40cf-abc8-fba59489300e/0/0/0/0,0,3644,2428,1200,800/0-0-0/8570f0a8-a8e0-477b-8a20-278475fda7e6/1/1/92-print-2476+Eagle+Ridge-92.jpg?fjkss=exp=2090960866~hmac=2d80abac269477117ba9c2879fc71bc61bb9064682d6f8c72fb01f780b79115c" alt="Eagle Ridge property" loading="lazy">
+    <img class="sample-img" src="https://format.creatorcdn.com/fc41f631-4ea7-40cf-abc8-fba59489300e/0/0/0/0,0,2305,1537,1200,800/0-0-0/568d2951-5a52-46ee-8f84-c1b266831e40/1/1/Gualala+23-151.JPG?fjkss=exp=2090960866~hmac=ff7c6818f14cb5cf45952b4aeee9babcb4df0d3bd3a508edccbf0dca94b70505" alt="Coastal property" loading="lazy">
+    <img class="sample-img" src="https://format.creatorcdn.com/fc41f631-4ea7-40cf-abc8-fba59489300e/0/0/0/0,0,3642,2429,1200,800/0-0-0/2178131f-9d23-4dc5-ad84-4962f9209052/1/1/20-print-2476+Eagle+Ridge-20.jpg?fjkss=exp=2090960866~hmac=d82caf6c7feb91121911f669f7fdcb6300af63563a6c63f9894fb68a8f687feb" alt="Eagle Ridge interior" loading="lazy">
+  </div>
 </div>
 
 <!-- Packages -->
